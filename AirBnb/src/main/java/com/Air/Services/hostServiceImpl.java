@@ -46,4 +46,15 @@ public class hostServiceImpl implements HostServiceIntr {
 		return hostintr.findAll().stream().filter(p->p.getHostStatus().equals(status)).toList();
 	}
 
+	@Override
+	public Host getHost(int hostId) throws SomethingWentWrong {
+		// TODO Auto-generated method stub
+		if(hostintr.findById(hostId)!=null) {
+			return hostintr.findById(hostId).get();
+		}else {
+			throw new  SomethingWentWrong("Host Not Found !");
+		}
+		
+	}
+
 }

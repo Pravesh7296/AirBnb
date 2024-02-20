@@ -11,7 +11,7 @@ import com.Air.Model.Host;
 public interface HostServiceIntr {
   public String addHost(Host host)  throws SomethingWentWrong;
   public String deleteHost(int hostId)  throws SomethingWentWrong;
-  public List<Host> listOfHost()  throws SomethingWentWrong;
+  public List<Host> listOfHost()  throws  SomethingWentWrong;
   public List<Host> HostByStatus(String status)  throws SomethingWentWrong;
-  
+  public Host getHost(int hostId) throws  SomethingWentWrong;
 }

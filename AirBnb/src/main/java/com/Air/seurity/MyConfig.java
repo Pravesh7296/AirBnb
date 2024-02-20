@@ -15,14 +15,14 @@ import org.springframework.stereotype.Component;
 @Configuration
 @Component
 class MyConfig {
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails userDetails = User.builder().
-                username("Pravesh")
-                .password(passwordEncoder().encode("Pravesh")).roles("ADMIN").
-                build();
-        return new InMemoryUserDetailsManager(userDetails);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        UserDetails userDetails = User.builder().
+//                username("Pravesh")
+//                .password(passwordEncoder().encode("Pravesh")).roles("ADMIN").
+//                build();
+//        return new InMemoryUserDetailsManager(userDetails);
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
